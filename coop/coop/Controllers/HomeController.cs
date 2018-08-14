@@ -12,7 +12,7 @@ namespace coop.Controllers
         coopEntities2 db = new coopEntities2();
         
 
-        // GET: Home
+        // GET: andy Home 
         public ActionResult Index()
         {
             var query = from o in db.members
