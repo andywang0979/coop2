@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -198,6 +199,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\members\Create.cshtml" />
+    <Content Include="Views\members\Delete.cshtml" />
+    <Content Include="Views\members\Details.cshtml" />
+    <Content Include="Views\members\Edit.cshtml" />
+    <Content Include="Views\members\Index.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\members1\Create.cshtml" />
+    <Content Include="Views\members1\Delete.cshtml" />
+    <Content Include="Views\members1\Details.cshtml" />
+    <Content Include="Views\members1\Edit.cshtml" />
+    <Content Include="Views\members1\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

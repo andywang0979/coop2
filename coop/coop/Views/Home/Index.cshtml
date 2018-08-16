@@ -1,5 +1,4 @@
-﻿@model List< coop.Models.member >
-
+﻿@model IEnumerable<coop.Models.member>
 
 @{
     ViewBag.Title = "Index";
@@ -7,33 +6,35 @@
 
 <h2>Index</h2>
 
-<div id="listOfGames">
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th></th>
+    </tr>
 
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.city)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.personId }) |
+                @*@Html.ActionLink("Details", "Details", new { id = item.personId }) |*@
+                @Html.ActionLink("Delete", "Delete", new { id = item.personId })
+            </td>
+        </tr>
+    }
 
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th class="col-sm-2">Name</th>
-                <th class="col-sm-6">City</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model) {
-                <tr>
-                    <td>@item.name</td>
-                    <td>@item.city</td>
-                    
-                </tr>
-            }
-
-        </tbody>
-    </table>
-
-</div>
-
-
-<div>
-    <a href="#" class="btn btn-info" role="button">Modify</a>
-    <a href="#" class="btn btn-info" role="button">Create</a>
-
-</div>
+</table>
